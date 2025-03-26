@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agujero Negro + Rayos de Luz</title>
+    <style>
+        /* Fondo oscuro para el espacio */
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Contenedor general */
+        .scene {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Agujero negro animado */
+        .black-hole {
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.9) 40%, transparent 80%);
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 8s linear infinite;
+            box-shadow: 0 0 80px rgba(0, 0, 0, 1);
+        }
+
+        /* Texto con rayos de luz */
+        .glow-text {
+            font-size: 3.5rem;
+            font-weight: bold;
+            position: relative;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            filter: blur(0.5px);
+        }
+
+        /* Rayos de luz que salen del texto */
+        .glow-text::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: white;
+            filter: blur(10px);
+            mix-blend-mode: screen;
+            opacity: 0.9;
+            animation: pulsate 3s infinite alternate;
+        }
+
+        /* Iluminación más fuerte con destellos */
+        .glow-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: white;
+            filter: blur(30px);
+            mix-blend-mode: screen;
+            opacity: 0.7;
+            animation: glow 5s infinite alternate;
+        }
+
+        /* Animación de brillo y destellos */
+        @keyframes glow {
+            0% { filter: blur(20px); opacity: 0.6; }
+            100% { filter: blur(40px); opacity: 1; }
+        }
+
+        /* Animación de los rayos de luz */
+        @keyframes pulsate {
+            0% { filter: blur(8px); opacity: 0.8; }
+            100% { filter: blur(15px); opacity: 1; }
+        }
+
+        /* Efecto de giro del agujero negro */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Segunda fase: Mensaje "Happy April 1st" */
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .fade-in {
+            animation: fadeIn 3s forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 3s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scene">
+        <div class="black-hole"></div>
+        <div id="first-text" class="glow-text" data-text="IN THE END">IN THE END</div>
+        <div id="second-text" class="glow-text hidden" data-text="Happy April 1st">Happy April 1st</div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            // Ocultar el primer texto
+            document.getElementById('first-text').classList.add('fade-out');
+
+            // Mostrar el segundo texto con efecto de entrada
+            setTimeout(() => {
+                document.getElementById('first-text').classList.add('hidden');
+                document.getElementById('second-text').classList.remove('hidden');
+                document.getElementById('second-text').classList.add('fade-in');
+            }, 3000);
+        }, 10000); // Espera 10 segundos antes de la transición
+    </script>
+
+</body>
+</html>

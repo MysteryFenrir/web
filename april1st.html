@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La línea del tiempo de Tipos de fursuits de Mystery Fenrir</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://www.solarsystemscope.com/textures/download/2k_stars.jpg') repeat;
+            animation: fondo-movimiento 20s linear infinite;
+        }
+
+        /* Animación de fondo */
+        @keyframes fondo-movimiento {
+            from { background-position: 0 0; }
+            to { background-position: 0 1000px; }
+        }
+
+        /* Contenedor de la línea de tiempo */
+        .timeline {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        /* Línea central */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: white;
+            transform: translateX(-50%);
+        }
+
+        /* Contenedores de eventos */
+        .event {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        /* Estilos alternados */
+        .event:nth-child(odd) { flex-direction: row-reverse; }
+        .event:nth-child(even) { flex-direction: row; }
+
+        /* Tarjeta de evento */
+        .event-content {
+            width: 45%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Imágenes de eventos */
+        .event img {
+            width: 35%;
+            height: 35%;
+        }
+
+        /* Conector entre imagen y línea */
+        .event::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        /* Contenedor de imagen y texto centrado */
+        .extra-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 50px 0;
+        color: white;
+        }
+
+        .extra-content img {
+        width: 450px; /* Ajusta el tamaño de la imagen */
+        }
+
+        /* Contenedor centrado del botón */
+        .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        }
+
+        /* Botón con efecto brillante */
+        .glow-button {
+        background-color: black;
+        color: white;
+        font-size: 1.5rem;
+        padding: 15px 30px;
+        border: 2px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s;
+        }
+
+        /* Efecto de resplandor */
+        .glow-button::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: 0;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(255, 255, 0, 0.7), rgba(255, 0, 0, 0.7), rgba(0, 255, 255, 0.7));
+        transition: 0.4s ease-in-out;
+        }
+
+        /* Efecto al pasar el mouse */
+        .glow-button:hover::before {
+        width: 105%;
+        }
+
+        .glow-button:hover {
+        color: black;
+        background: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="extra-content">
+        <img src="imgs\logo21.png" alt="Evento especial">
+        <p>Descubre la gran linea del tiempo de los siguientes Tipos de Fursuits de Mystery Fenrir</p>
+    </div>
+
+    <div class="timeline">
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/First_image_of_a_black_hole.jpg/300px-First_image_of_a_black_hole.jpg" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2025 Septiembre</h3>
+                <p>En esta tricuela veremos más tipos de fursuits únicas e increibles</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Moon_landing.jpg" alt="Llegada a la Luna">
+            <div class="event-content">
+                <h3>2025 Diciembre</h3>
+                <p>La cuarta edición navideña con más tipos de fursuits e increible animación Ft.???</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="imgs\gol.png" alt="Voyager 1">
+            <div class="event-content">
+                <h3>2026 Febrero</h3>
+                <p>La quinta edición de esta serie, en donde veremos los mejores tipos de fursuits y webadas</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="" alt="Llegada a la Luna">
+            <div class="event-content">
+                <h3>2026 Mayo</h3>
+                <p>La sexta parte de la serie, ESTO VA EN SERIO</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/First_image_of_a_black_hole.jpg/300px-First_image_of_a_black_hole.jpg" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2026 Julio</h3>
+                <p>En esta septima parte, veremos más tipos de fursuit que... ni se enterarán que son estilos de fursuits</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Moon_landing.jpg" alt="Llegada a la Luna">
+            <div class="event-content">
+                <h3>2026 Octubre</h3>
+                <p>Parte 8 de la saga y la que tendrá las 7 palabras: ESENCIA</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2026 Noviembre</h3>
+                <p>😉</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Moon_landing.jpg" alt="Llegada a la Luna">
+            <div class="event-content">
+                <h3>2027 Enero</h3>
+                <p>La parte 10 de esta gran serie con más fursuits y... un cambio de</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="imgs\logo1.png" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2027 Marzo</h3>
+                <p>Parte 11 de esta magnifica serie, ya quiero que se acabe</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="C:\Users\Jerryy\Downloads\e\imgs\minecraft_title1.png" alt="😏">
+            <div class="event-content">
+                <h3>2027 Abril</h3>
+                <p>LA PARTE FINAL DE LA TRAMA, adiós chavito te irá mejor en el bote</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/First_image_of_a_black_hole.jpg/300px-First_image_of_a_black_hole.jpg" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2027 Mayo</h3>
+                <p>C-CO-COMO????</p>
+            </div>
+        </div>
+
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Moon_landing.jpg" alt="Llegada a la Luna">
+            <div class="event-content">
+                <h3>2027 Julio</h3>
+                <p>Primera parte de los tipos de fursuits 2da edición</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/First_image_of_a_black_hole.jpg/300px-First_image_of_a_black_hole.jpg" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2027 Agosto</h3>
+                <p>Segunda parte de la parte 2 en donde habrá muchos tipos de fursuits</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/First_image_of_a_black_hole.jpg/300px-First_image_of_a_black_hole.jpg" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2028 Marzo</h3>
+                <p>JODER, QUE ESTO NO ACABA</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/First_image_of_a_black_hole.jpg/300px-First_image_of_a_black_hole.jpg" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2029 Enero</h3>
+                <p>La película más esperada, TIPOS DE FURSUITS, THE FINAL CUT... ft: ????</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/First_image_of_a_black_hole.jpg/300px-First_image_of_a_black_hole.jpg" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2030 Abril</h3>
+                <p>La secuela esperada de la saga de peliculas: TIPOS DE FURSUITS 2 director's cut</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/First_image_of_a_black_hole.jpg/300px-First_image_of_a_black_hole.jpg" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2031 Septiembre</h3>
+                <p>Apostando a nuestro mejor trabajo... Tipos de fursuit the movie 4 It's About Time</p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/First_image_of_a_black_hole.jpg/300px-First_image_of_a_black_hole.jpg" alt="Agujero Negro">
+            <div class="event-content">
+                <h3>2034 Agosto</h3>
+                <p>El último trabajo de Mystery antes de irse... a su casa: Tipitos de Fursuits</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="extra-content">
+        <p>Has llegado al final de la línea del tiempo, pero falta algo más...</p>
+    </div>
+
+    <div class="button-container">
+        <a href="cosdo.html">
+            <button class="glow-button">Ver el futuro de la saga</button>
+        </a>
+    </div>
+    
+</body>
+</html>
